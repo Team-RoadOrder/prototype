@@ -1,0 +1,16 @@
+@import "styles/header.css";
+@import "styles/splash.css";
+@import "styles/quick.css";
+@import "common.css";
+
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+body > .box {
+    width: 71.25rem;
+}

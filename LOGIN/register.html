@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+    <html lang = "ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <title>register</title>
+        <link rel = "stylesheet" type = "text/css" href = "../LOGIN/css/registerstyle.css">
+    </head>
+    <body>
+
+    <div id="wrap" class="wrapper">
+        <form method ="post" name="join" id="join">
+            <header>
+                <div id="header">
+                    <h1> 회원가입 </h1>
+                </div>
+            </header>
+
+            <div id="container">
+                <div class="row_group">
+                    <div class="userInput">
+                        <h3 class="list">성명<span id="nameError"></span></h3>
+                        <span class="box int_id">
+                        <input type="text" id="name" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">아이디<span id="idError"></span></h3>
+                        <span class="box int_id">
+                        <input type="text" id="id" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">비밀번호<span id="pwError"></span></h3>
+                        <span class="box int_id">
+                        <input type="password" id="pw" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">비밀번호 재확인<span id="pwCheckError"></span></h3>
+                        <span class="box int_id">
+                        <input type="password" id="pwCheck" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="btn_area">
+                        <input type="submit" value="가입하기" id="btnJoin" class="btn_type btn_primary">
+                    </div>
+                </div> <!-- row_group 닫힘 -->
+            </div> <!-- ✅ container 닫힘 -->
+
+        </form>
+    </div>
+    <script>
+        document.getElementById("join").addEventListener("submit", function (e) {
+            e.preventDefault(); // 기본 제출 막기
+
+            const name = document.getElementById("name").value;
+            const id = document.getElementById("id").value;
+            const pw = document.getElementById("pw").value;
+            const pwCheck = document.getElementById("pwCheck").value;
+
+            if (pw !== pwCheck) {
+                alert("비밀번호가 일치하지 않습니다!");
+                return;
+            }
+
+            // 서버로 데이터 전송
+            fetch("http://localhost:4000/api/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, id, pw }),
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert(data.message); // 서버에서 오는 응답 표시
+                })
+                .catch(err => console.error("에러:", err));
+        });
+    </script>
+
+
+    </body>
+    </html>

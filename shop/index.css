@@ -1,9 +1,5 @@
 @import "index/header.css";
-@import "index/splash.css";
-@import "index/quick.css";
 @import "common.css";
-@import "index/popularBrand.css";
-
 
 body {
     align-items: center;

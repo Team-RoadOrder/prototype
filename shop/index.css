@@ -1,5 +1,10 @@
 @import "index/header.css";
 @import "common.css";
+@import "index/main.css";
+@import "index/shop-header.css";
+@import "index/quick.css";
+@import "index/category.css";
+
 
 body {
     align-items: center;

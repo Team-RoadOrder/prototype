@@ -54,6 +54,7 @@
             <li class="item"><a href="#">RESERVATION</a></li>
             <li class="item"><a href="#">PICK UP</a></li>
             <li class="item"><a href="#">PRODUCT</a></li>
+            <li class="item"><a href="../MY/my.html">MY PAGE</a></li>
 
         </ul>
 
@@ -75,7 +76,7 @@
             </a>
         </li>
         <li class="item">
-            <a class="login" href="./LOGIN/Login.html">
+            <a class="login" href="../LOGIN/Login.html">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg"  fill="#000000" version="1.1" id="Capa_1" width="30" height="25" viewBox="0 0 45.916 45.916" xml:space="preserve"><g><g><path d="M30.061,18.237c2.127-1.916,3.476-4.683,3.476-7.772C33.536,4.684,28.85,0,23.07,0C17.29,0,12.604,4.685,12.604,10.465    c0,3.085,1.343,5.85,3.467,7.766c-5.441,0.422-9.74,4.928-9.779,10.477L6.224,40.154c-0.01,1.525,0.59,2.99,1.665,4.072    c1.075,1.08,2.537,1.689,4.062,1.689h10.151h11.794c3.15,0,5.709-2.543,5.729-5.693l0.068-11.361    c0.021-2.826-1.089-5.538-3.083-7.544C34.851,19.543,32.526,18.465,30.061,18.237z"/></g></g></svg>
             </a>
         </li>
@@ -83,6 +84,198 @@
     </ul>
     <!-- glass를 클릭했을때 검색창이 나타나게 한다 -->
 </header>
-<!-- 헤더 렌더링 하는법 몰라서 일단 복붙함 뒤에 배경넣고
+<!-- 헤더 렌더링 하는법 몰라서 일단 복붙함 뒤에 배경넣고-->
+<main id="main" >
+        <img src="./images/waviness.jpeg" class="image" alt="">
+</main> <!-- 헤더뒤에 배경 -->
+<div class="box" id="shop-header">
+<img src="./images/brand.jpeg" class="logo" alt="">
+    <div class="profile">
+        <div class="title">Waviness</div>
+        <span class="description">웨이비니스</span>
+        <div class="count">
+            <span class="like">관심</span>
+            <span class="num">4,001 ></span>
+            <span class="style">스타일</span>
+            <span class="num">565 ></span>
+        </div>
+        <div class="button">
+        <button class="like"><a href="#">관심 저장</a></button>
+            <button class="share"><a href="#" >브랜드 공유</a></button>
+        </div>
+    </div>
+</div> <!--매장 소개 들어갈곳 -->
+<ul class="box" id="quick">
+    <li class="item">
+        <a class="link" href="./shop.html">
+                  <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/1.webp">
+                       </span>
+            <span class="text">인기매장</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="#">
+              <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/2.webp">
+                  </span>
+            <span class="text">인기상품</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="#">
+                 <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/3.webp">
+                     </span>
+            <span class="text">할인매장</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="#">
+                 <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/4.webp">
+                     </span>
+            <span class="text">할인상품</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="#">
+                 <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/5.webp">
+                     </span>
+            <span class="text">예약</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="#">
+                   <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/6.webp">
+                       </span>
+            <span class="text">픽업</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="#">
+                   <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/7.webp">
+                       </span>
+            <span class="text">마이페이지</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="#">
+                   <span class="icon-wrapper">
+                <img alt="" class="icon" src="../shop/images/quick/8.webp">
+                       </span>
+            <span class="text">내주변매장</span>
+        </a>
+    </li>
+
+</ul>
+<div class="box" id="category">
+<div class="form-container">
+    <ul class="selection">
+        <li class="item">
+            <label class="label">
+                <input type="radio" name="selection" value="1" class="radio checked" checked>
+                <span class="caption">전체</span>
+            </label>
+        </li>
+        <li class="item">
+            <label class="label">
+                <input type="radio" name="selection" value="2" class="radio">
+                <span class="caption">아우터</span>
+            </label>
+        </li>
+        <li class="item">
+            <label class="label">
+                <input type="radio" name="selection" value="3" class="radio">
+                <span class="caption">상의</span>
+            </label>
+        </li>
+        <li class="item">
+            <label class="label">
+                <input type="radio" name="selection" value="4" class="radio">
+                <span class="caption">하의</span>
+            </label>
+        </li>
+        <li class="item">
+            <label class="label">
+                <input type="radio" name="selection" value="5" class="radio">
+                <span class="caption">가방</span>
+            </label>
+        </li>
+        <li class="item">
+            <label class="label">
+                <input type="radio" name="selection" value="6" class="radio">
+                <span class="caption">패션잡화</span>
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="grid">
+        <a class="box one" href="#">
+            <span class="image-wrapper">
+            <span class="image"></span>
+                </span>
+            <span class="text-container">
+            <span class="title"></span>
+            <span class="price"></span>
+        </span>
+        </a>
+        <a class="box two" href="#">
+             <span class="image-wrapper">
+            <span class="image"></span>
+                </span>
+            <span class="text-container">
+            <span class="title"></span>
+            <span class="price"></span>
+        </span>
+        </a>
+        <a class="box three" href="#">
+             <span class="image-wrapper">
+            <span class="image"></span>
+                </span> <!--background 이미지로처리--><!--background 이미지로처리-->
+            <span class="text-container">
+         <span class="title"></span>
+        <span class="price"></span>
+        </span>
+        </a>
+        <a class="box four" href="#">
+           <span class="image-wrapper">
+            <span class="image"></span>
+                </span>
+            <span class="text-container">
+            <span class="title"></span>
+            <span class="price"></span>
+        </span>
+        </a>
+        <a class="box five" href="#">
+           <span class="image-wrapper">
+            <span class="image"></span>
+                </span>
+            <span class="text-container">
+            <span class="title"></span>
+            <span class="price"></span>
+        </span>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    document.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 0) {
+            header.classList.add('scroll-active');
+        } else {
+            header.classList.remove('scroll-active');
+        }
+    });
+</script>
 </body>
 </html>

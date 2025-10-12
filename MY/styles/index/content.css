@@ -345,7 +345,7 @@
 
 }
 #content .grid > .box.one .image {
-    background-image: url("/shop/images/category/one-1.webp");
+    background-image: url("/SHOP/images/category/one-1.webp");
 }
 #content  .grid > .box.one >.text-container >.title::after {
     content:"Waviness Tide Layer Wool Crop Jacket Black";
@@ -362,7 +362,7 @@
     color: #000000;
 }
 #content .grid > .box.two .image {
-    background-image: url("/shop/images/category/one-2.webp");
+    background-image: url("/SHOP/images/category/one-2.webp");
 }
 #content .grid > .box.two >.text-container >.title::after {
     content:"Waviness Tide Layer Wool Crop Jacket Black";
@@ -379,7 +379,7 @@
     color: #000000;
 }
 #content .grid > .box.three .image {
-    background-image: url("/shop/images/category/one-3.webp");
+    background-image: url("/SHOP/images/category/one-3.webp");
 }
 #content .grid > .box.three >.text-container >.title::after {
     content:"Waviness Tide Layer Wool Crop Jacket Black";
@@ -396,7 +396,7 @@
     color: #000000;
 }
 #content .grid > .box.four .image {
-    background-image: url("/shop/images/category/one-4.webp");
+    background-image: url("/SHOP/images/category/one-4.webp");
 }
 #content .grid > .box.four >.text-container >.title::after {
     content:"Waviness Tide Layer Wool Crop Jacket Black";
@@ -413,7 +413,7 @@
     color: #000000;
 }
 #content .grid > .box.five .image {
-    background-image: url("/shop/images/category/one-5.webp");
+    background-image: url("/SHOP/images/category/one-5.webp");
 }
 #content .grid > .box.five >.text-container >.title::after {
     content:"Waviness Tide Layer Wool Crop Jacket Black";

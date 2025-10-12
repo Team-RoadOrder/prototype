@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>register</title>
+    <link rel="stylesheet" type="text/css" href="css/chhregister.css">
+</head>
+<body>
+
+<div id="wrap" class="wrapper">
+    <div class="insideWrapper">
+        <form method="post" name="join" id="join">
+            <header>
+                <div id="header">
+                    <h1> 회원가입 </h1>
+                </div>
+            </header>
+
+            <div class="selectUser">
+                <label class="User">
+                    <input class="customer" type="radio" name="userType" value="customer" checked><span class="selecter">고객님</span>
+                </label>
+                <label class="User">
+                    <input class="owner" type="radio" name="userType" value="owner"><span class="selecter">사장님</span>
+                </label>
+            </div>
+
+            <div id="container">
+                <div class="row_group">
+                    <div class="userInput">
+                        <h3 class="list">닉네임<span id="nameError"></span></h3>
+                        <span class="box int_id">
+                        <input type="text" id="name" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">아이디<span id="idError"></span></h3>
+                        <span class="box int_id">
+                        <input type="text" id="id" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">비밀번호<span id="pwError"></span></h3>
+                        <span class="box int_id">
+                        <input type="password" id="pw" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">비밀번호 재확인<span id="pwCheckError"></span></h3>
+                        <span class="box int_id">
+                        <input type="password" id="pwCheck" class="int check" maxlength="20">
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">주소<span id="address"></span></h3>
+                        <span class="box int_id">
+                        <input type="password" id="adr" class="int check" required>
+                    </span>
+                    </div>
+
+                    <div class="userInput">
+                        <h3 class="list">연락처<span id="phoneNumber"></span></h3>
+                        <span class="box int_id">
+                        <input type="tel" id="number" class="int check" maxlength="11" required>
+                    </span>
+                    </div>
+
+                    <div id="customerFields">
+                        <div class="userInput">
+
+                            <h3 class="List">성별을 선택하세요</h3>
+                            <form class="gender">
+                                <div class="box int_id">
+                                    <div class="sex">
+                                        <label class="gender-option">
+                                            <input type="radio" name="gender" value="male">
+                                            <span>남성</span>
+                                        </label>
+
+                                        <label class="gender-option">
+                                            <input type="radio" name="gender" value="female">
+                                            <span>여성</span>
+                                        </label>
+
+                                        <label class="gender-option">
+                                            <input type="radio" name="gender" value="other">
+                                            <span>기타</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <h3 class="list">상의 사이즈, 하의 사이즈, 신발 사이즈<span id="size"></span></h3>
+                            <form class="size">
+                            <select class="top Size">
+                                <option value="none">상의 사이즈를 선택해주세요</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                            </select>
+
+                            <select class="bottom Size">
+                                <option value="none">하의 사이즈를 선택해주세요</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                            </select>
+
+                            <select class="shoes Size">
+                                <option value="none">신발 사이즈를 선택해주세요</option>
+                                <option value="230">230</option>
+                                <option value="235">235</option>
+                                <option value="240">240</option>
+                                <option value="245">245</option>
+                                <option value="250">250</option>
+                                <option value="255">255</option>
+                                <option value="260">260</option>
+                                <option value="265">265</option>
+                                <option value="270">270</option>
+                                <option value="275">275</option>
+                                <option value="280">280</option>
+                                <option value="285">285</option>
+                                <option value="290">290</option>
+                                <option value="295">295</option>
+                                <option value="300">300</option>
+                            </select>
+
+                                <h3 class="list">선호하는 스타일<span id="favoriteStyle"></span></h3>
+                            <select class="styleSelect">
+                                <option value="none">선호하는 스타일을 선택해주세요.</option>
+                                <option value="casual">캐주얼</option>
+                                <option value="street">스트릿</option>
+                                <option value="minimal">미니멀</option>
+                                <option value="vintage">빈티지</option>
+                                <option value="office">오피스</option>
+                            </select>
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                    <div id="ownerFields" class="hidden">
+                        <div class="userInput">
+                            <h3 class="list">사업자등록번호<span id="businessnumber"></span></h3>
+                            <span class="box int_id">
+                        <input type="number" id="business" class="int check" maxlength="11">
+                    </span>
+                        </div>
+
+                        <div class="userInput">
+                            <h3 class="list">매장이름<span id="storeName"></span></h3>
+                            <span class="box int_id">
+                        <input type="password" id="store" class="int check" maxlength="20">
+                    </span>
+                        </div>
+                    </div>
+
+
+                    <div class="btn_area">
+                        <input type="submit" value="가입하기" id="btnJoin" class="btn_type btn_primary">
+                    </div>
+                </div> <!-- row_group 닫힘 -->
+            </div> <!-- ✅ container 닫힘 -->
+
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById("join").addEventListener("submit", function (e) {
+        e.preventDefault(); // 기본 제출 막기
+
+        const name = document.getElementById("name").value;
+        const id = document.getElementById("id").value;
+        const pw = document.getElementById("pw").value;
+        const pwCheck = document.getElementById("pwCheck").value;
+
+        if (pw !== pwCheck) {
+            alert("비밀번호가 일치하지 않습니다!");
+            return;
+        }
+
+        // 서버로 데이터 전송
+        fetch("http://localhost:4000/api/register", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({name, id, pw}),
+        })
+            .then(res => res.json())
+            .then(data => {
+                alert(data.message); // 서버에서 오는 응답 표시
+            })
+            .catch(err => console.error("에러:", err));
+    });
+
+    const userTypeRadios = document.querySelectorAll('input[name="userType"]');
+    const ownerFields = document.getElementById('ownerFields');
+    const customerFields = document.getElementById('customerFields');
+
+    userTypeRadios.forEach(radio => {                   //고객님과 사장님 radio
+        radio.addEventListener('change', () => {
+            if (radio.value === 'customer') {           //고객님으로 선택되었을 때
+                ownerFields.classList.add('hidden');    //사장님필드는 숨김
+                customerFields.classList.remove('hidden');  //고객님필드는 나오게 함
+            } else {
+                ownerFields.classList.remove('hidden');
+                customerFields.classList.add('hidden');
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>ITEM</title>
     <!--<link href="assets/images/favicon.ico" rel="shortcut icon">-->
     <!-- 탭창 파비콘 들어가야함-->
     <link rel="stylesheet" href="../ITEM/css/item.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Gowun+Dodum&family=Nanum+Brush+Script&family=Yellowtail&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <header id="header">
@@ -18,12 +20,47 @@
         </a>
         <ul class="nav">
             <li class="item selected"><a href="#">HOME</a></li>
-            <li class="item"><a href="#">SHOP</a></li>
+            <li class="item shop">
+                <a href="#">SHOP</a>
+                <div class="sub-menu">
+                    <ul class="shop-menu">
+                        <li class="item">
+                            <a href="./shop/shop.html" class="link">
+                                Popular Shops
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link">
+                                Sale Shops
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link">
+                                Nearby Shops
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link">
+                                recommended shops
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link">
+                                New shops
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <li class="item"><a href="#">INFO</a></li>
-            <li class="item"><a href="./ITEM/item.html">ITEM</a></li>
-            <li class="item"><a href="#">SHOP</a></li>
+            <li class="item"><a href="#">RESERVATION</a></li>
+            <li class="item"><a href="#">PICK UP</a></li>
             <li class="item"><a href="#">PRODUCT</a></li>
+            <li class="item"><a href="./MY/my.html">MY PAGE</a></li>
+
+
         </ul>
+
     </div>
     <div class="spring"></div>
     <ul class="icon-menu">
@@ -55,7 +92,7 @@
     <div></div> <!-- shop에 호버하면 밑에 목록 쫘르륵 나타나는부분 -->
 </header>
 
-                            <!--상품이미지-->
+<!--상품이미지-->
 
 <div class="background"></div>
 <div class="box container">
@@ -70,7 +107,7 @@
             <a class="dot" href="#splashTwo"></a>
         </div>
     </div>
-                                <!--상품가격 및 구매-->
+    <!--상품가격 및 구매-->
     <div id="login-wrapper">
         <div class="buy">
             <p class="buyText">구매가</p>
@@ -98,7 +135,7 @@
             <div class="buying">구매하기</div>
         </a>
 
-        <div class="cart">장바구니 담기</div>
+        <div class="cartBox">장바구니 담기</div>
 
         <div class="additional">
             <p>추가 혜택</p>
@@ -111,34 +148,41 @@
         </div>
         <div class="point">
             <p class="pointCredit">결제</p>
-            <p class="credit">크림카드 최대 15만...  외 10건</p>
+            <p class="credit">크림카드 최대 15만... 외 10건</p>
         </div>
 
         <div class="delivery">
             <p class="deliveryInformation">배송 정보</p>
             <div class="deliveryImage">
                 <img src="../ITEM/images/deliveryIcon.png" alt="deliveryIcon">
-                <p class="deliveryText1"><b>브랜드배송</b> 3,000원</p>
-                <p class="deliveryText2">입점한 브랜드에서 직접 택배 배송</p>
-                <p class="deliveryText3">7만원 이상 구매 시 배송비 무료</p>
+                <div class="deliveryContainer">
+                    <p class="deliveryText1"><b>브랜드배송</b> 3,000원</p>
+                    <p class="deliveryText2">입점한 브랜드에서 직접 택배 배송</p>
+                    <p class="deliveryText3">7만원 이상 구매 시 배송비 무료</p>
+                </div>
             </div>
 
-            <div class="shop">
+            <div class="shopName">
                 <a href="#">
                     <img class="shopImage" src="../ITEM/images/shopImage.webp" alt="">
-                    <span><b>Polyteru</b> ></span>
-                    <p>폴리테루 </p>
-                    <p> º 관심</p>
-                    <p>2.1만</p>
+                    <p>Polyteru</p>
+                    <p class="polyteru"> ></p>
+                    <div class="attractive">
+                        <p>폴리테루 </p>
+                        <p> º 관심</p>
+                        <p>2.1만</p>
+                    </div>
                 </a>
                 <div class="save">
-                    <img src="../ITEM/images/bookmark.png" alt="bookmark.png">
-                    <img src="../ITEM/images/bookmark-black.png" alt="bookmark-black.png">
+                    <input type="checkbox" id="bookmark-toggle" hidden>
+                    <label for="bookmark-toggle" class="bookmark-label">
+                        <img src="../ITEM/images/bookmark.png" class="bookmark default" alt="bookmark">
+                        <img src="../ITEM/images/bookmark-black.png" class="bookmark active" alt="bookmark-black">
+                    </label>
                 </div>
             </div>
         </div>
     </div>
-    <div class="shadow"></div>
 </div>
 
 <script>

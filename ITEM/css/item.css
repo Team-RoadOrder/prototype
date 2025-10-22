@@ -10,6 +10,22 @@ body {
 
 }
 
+#header > .left > .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: "Bitter", serif;
+    box-sizing: border-box;
+    position: relative;
+    top: 0.5rem;
+    left: 1rem;
+}
+
 /*body .background {*/
 /*    top: 0;*/
 /*    left: 0;*/
@@ -25,12 +41,11 @@ body {
 
 body  .box {
     padding: 10rem 0.5rem 0 0.5rem;
-    /*padding-top: 10rem ;*/
 }
 body .container {
     justify-content: center;
     align-items: flex-start;
-    max-width: 80rem;
+    width: 100%;
     overflow-y: hidden;
     display: flex;
     flex-direction: row;
@@ -172,16 +187,158 @@ body .container {
     padding: 11px 8px 11px 10px;
 }
 
-.cart{
+.cartBox{
     align-items: center;
     border: 1px solid #ebebeb;
     border-radius: 10px;
     height: 60px;
     cursor: pointer;
     color: #333;
+    font-size: 15px;
+    font-weight: 400;
     display: flex;
     justify-content: center;
-    padding: 11px 8px 11px 10px;
+    /*padding: 11px 8px 11px 10px;*/
+}
+
+
+
+.additional{
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional a{
+    color: rgba(34, 34, 34, .5);
+    font-size: 13px;
+    margin: 0 2rem;
+}
+
+.additional p{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 3rem;
+}
+
+.point{
+    display: flex;
+}
+
+.pointCredit{
+    font-size: 12px;
+    color: rgba(34, 34, 34, 0.5);
+    margin: 0 3rem;
+}
+
+.credit{
+    font-size: 13px;
+    color: rgb(34, 34, 34);
+}
+
+.delivery > .deliveryInformation{
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+.delivery > .deliveryImage img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 0.5rem;
+}
+
+.deliveryImage{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.deliveryContainer{
+    margin: 0 1rem;
+}
+
+.deliveryText1{
+    font-size: 13px;
+}
+
+.deliveryText2, .deliveryText3{
+    font-size: 12px;
+    color: rgba(34, 34, 34, .5);
+}
+
+.shopName{
+    border-top: 8px solid #f0f0f0;
+    padding: 1rem 0;
+    cursor: pointer;
+    display: flex;
+}
+
+.shopName p{
+    display: inline-block;
+    position: relative;
+    bottom: 1.5rem;
+}
+
+.attractive{
+    margin-left: 3rem;
+    color: #22222280;
+    font-size: 12px;
+}
+
+.shopImage{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999rem;
+    display: inline-block;
+}
+
+/* 숨김 처리된 체크박스 (완전 숨기지 말고 위치만 옮김으로써 선택 가능하게 유지) */
+#bookmark-toggle {
+    position: absolute;
+    left: -9999px;
+}
+
+/* 이미지 기본 스타일 */
+.bookmark {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 컨테이너 */
+.save {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    left: 8rem;
+}
+
+/* label을 block으로 만들기 */
+.bookmark-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* 기본 이미지 보이기, 검정 이미지 숨기기 */
+.bookmark.default {
+    opacity: 1;
+}
+
+.bookmark.active {
+    opacity: 0;
+}
+
+/* 체크됐을 때 상태 전환 */
+#bookmark-toggle:checked + .bookmark-label .default {
+    opacity: 0;
+}
+
+#bookmark-toggle:checked + .bookmark-label .active {
+    opacity: 1;
 }
 
 

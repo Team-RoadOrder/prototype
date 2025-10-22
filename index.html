@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./MAINPAGE/index.css">
     <link href="./LOGIN/img/road.jpg" rel="icon"  >
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Gowun+Dodum&family=Nanum+Brush+Script&family=Yellowtail&display=swap" rel="stylesheet">
+    <script defer src="./MAINPAGE/scripts/index.js"></script>
 </head>
 <body>
 <!-- 헤더부분 , 로고와 네비바가 들어감 -->
@@ -26,7 +27,7 @@
         <div class="sub-menu">
             <ul class="shop-menu">
                 <li class="item">
-                    <a href="SHOP/shop.html" class="link">
+                    <a href="./SHOP/shop.html" class="link">
                         Popular Shops
                     </a>
                 </li>
@@ -36,12 +37,12 @@
                     </a>
                 </li>
                 <li class="item">
-                    <a href="#" class="link">
+                    <a href="./NEARBYSHOP/nearbyshop.html" class="link">
                         Nearby Shops
                     </a>
                 </li>
                 <li class="item">
-                    <a href="#" class="link">
+                    <a href="./RECOMMENDEDSHOP/recommendedshop.html" class="link">
                         recommended shops
                     </a>
                 </li>
@@ -53,24 +54,25 @@
             </ul>
         </div>
     </li>
-    <li class="item"><a href="#">INFO</a></li>
+    <li class="item"><a href="./INFO/info.html">INFO</a></li>
     <li class="item"><a href="#">RESERVATION</a></li>
     <li class="item"><a href="#">PICK UP</a></li>
     <li class="item"><a href="#">PRODUCT</a></li>
     <li class="item"><a href="./MY/my.html">MY PAGE</a></li>
-
-
 </ul>
 
 </div>
  <div class="spring"> </div>
     <ul class="icon-menu">
         <li class="item">
-            <a class="glass" href="#">
+            <form action="./SEARCHRESULT/searchresult.html" method="get" >
+            <button class="glass" aria-label="검색창 열기" type="button">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="25" viewBox="0 0 48 48">
                     <path d="M 20.5 6 C 12.515556 6 6 12.515562 6 20.5 C 6 28.484438 12.515556 35 20.5 35 C 23.773158 35 26.788919 33.893018 29.220703 32.050781 L 38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938 L 32.050781 29.220703 C 33.893017 26.788918 35 23.773156 35 20.5 C 35 12.515562 28.484444 6 20.5 6 z M 20.5 10 C 26.322685 10 31 14.677319 31 20.5 C 31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531 C 25.824103 29.912403 23.29771 31 20.5 31 C 14.677315 31 10 26.322681 10 20.5 C 10 14.677319 14.677315 10 20.5 10 z"></path>
                 </svg>
-            </a>
+            </button>
+            <input type="text" id="searchInput" class="search-box" aria-label="검색창">
+            </form>
         </li>
         <li class="item">
             <a class="cart" href="#">
@@ -95,7 +97,7 @@
        <span class="title">CORS:ConnectingStyle to RoadShop</span>
         <span class="description1">25Fall/Winter 'SHOP' collection  </span>
         <span class="description2">"Make you look Better" </span>
-        <button class="logo">ENJOY NOW</button>
+        <button class="logo" onclick="location.href='./Reservation/reservation.html'" >Reservate Now</button>
     </div>
 
 <div id="side" >
@@ -122,7 +124,7 @@
             </a>
         </li>
         <li class="item">
-            <a class="link" href="./ITEM/item.html">
+            <a class="link" href="./ITEMLIST/itemlist.html">
               <span class="icon-wrapper">
                 <img alt="" class="icon" src="./MAINPAGE/images/quick/2.png">
                   </span>
@@ -138,29 +140,29 @@
             </a>
         </li>
         <li class="item">
-            <a class="link" href="#">
+            <a class="link" href="./MY/my.html?tab=2">
                  <span class="icon-wrapper">
                 <img alt="" class="icon" src="./MAINPAGE/images/quick/4.webp">
                      </span>
-                <span class="text">매장 목록</span>
+                <span class="text">예약 및 픽업</span>
             </a>
         </li>
-        <li class="item">
-            <a class="link" href="#">
-                 <span class="icon-wrapper">
-                <img alt="" class="icon" src="./MAINPAGE/images/quick/5.png">
-                     </span>
-                <span class="text">예약</span>
-            </a>
-        </li>
-        <li class="item">
-            <a class="link" href="#">
-                   <span class="icon-wrapper">
-                <img alt="" class="icon" src="./MAINPAGE/images/quick/6.png">
-                       </span>
-                <span class="text">픽업</span>
-            </a>
-        </li>
+    <li class="item">
+        <a class="link" href="./MY/my.html?tab=3">
+         <span class="icon-wrapper">
+        <img alt="" class="icon" src="./MAINPAGE/images/quick/5.png">
+             </span>
+            <span class="text">관심 매장</span>
+        </a>
+    </li>
+    <li class="item">
+        <a class="link" href="./MY/my.html?tab=4">
+           <span class="icon-wrapper">
+        <img alt="" class="icon" src="./MAINPAGE/images/quick/6.png">
+               </span>
+            <span class="text">관심 상품</span>
+        </a>
+    </li>
         <li class="item">
             <a class="link" href="./MY/my.html">
                    <span class="icon-wrapper">
@@ -170,44 +172,44 @@
             </a>
         </li>
         <li class="item">
-            <a class="link" href="#">
+            <a class="link" href="./Reservation/reservation.html">
                    <span class="icon-wrapper">
                 <img alt="" class="icon" src="./MAINPAGE/images/quick/8.png">
                        </span>
-                <span class="text">할인매장</span>
+                <span class="text">예약하러가기</span>
             </a>
         </li>
         <li class="item">
-            <a class="link" href="#">
+            <a class="link" href="./RECOMMENDEDSHOP/recommendedshop.html">
                    <span class="icon-wrapper">
                 <img alt="" class="icon" src="./MAINPAGE/images/quick/9.png">
                    </span>
-                <span class="text">할인상품</span>
+                <span class="text">추천매장</span>
             </a>
         </li>
     </ul>
 
 <div class="box" id="popularBrand">
     <a class="more" href="#">더보기</a><!--position:absolute로 우상단 고정-->
-    <span class="title">지금 인기 브랜드</span>
+    <span class="title">지금 뜨고있는 상품</span>
 <div class="form-container">
     <ul class="selection">
         <li class="item">
             <label class="label">
                 <input type="radio" name="selection" value="1" class="radio" checked>
-                <span class="caption">랩</span>
+                <span class="caption">미니멀</span>
             </label>
         </li>
         <li class="item">
             <label class="label">
                 <input type="radio" name="selection" value="2" class="radio">
-                <span class="caption">노스페이스</span>
+                <span class="caption">캐주얼</span>
             </label>
         </li>
         <li class="item">
             <label class="label">
                 <input type="radio" name="selection" value="3" class="radio">
-                <span class="caption">논노드</span>
+                <span class="caption">스트릿</span>
             </label>
         </li>
     </ul>
@@ -256,13 +258,42 @@
         </span>
         </div>
     </div>
-
-
 </div>
 
+<div class="box" id="popularShop">
+    <a class="more" href="#">더보기</a>
+    <span class="title">지금 뜨고있는 매장</span>
+    <ul class="list">
+        <li class="item">
+            <img alt="" class="logo" draggable="false" src="https://static.upbit.com/logos/BTC.png">
+            <div class="text-container">
+                <div class="name-container">
+                    <span class="ko">비트코인</span>
+                    <span class="en">Bitcoin</span>
+                </div>
+                <span class="code">KRW-BTC</span>
+            </div>
+            <div class="number-container">
+                <span class="price">168,906,000</span>
+            </div>
+        </li>
+        <li class="item">
+            <img alt="" class="logo" draggable="false" src="https://static.upbit.com/logos/USDT.png">
+            <div class="text-container">
+                <div class="name-container">
+                    <span class="ko">테더</span>
+                    <span class="en">Tether</span>
+                </div>
+                <span class="code">KRW-USDT</span>
+            </div>
+            <div class="number-container">
+                <span class="price">1,511</span>
+            </div>
+        </li>
+    </ul>
+</div>
 
 <footer>
-
 
 </footer>
 
@@ -285,6 +316,22 @@
             // 현재 클릭된 점에 'checked' 클래스 추가
             this.classList.add('checked');
         });
+    });
+    // 검색창에 있는 헤더를 위한
+    const searchIcon = document.querySelector('.glass');
+    const searchInput = document.getElementById('searchInput');
+
+    // 돋보기 아이콘에 'click' 이벤트 리스너를 추가합니다.
+    searchIcon.addEventListener('click', (event) => {
+
+
+        // searchInput 요소에 'show' 클래스를 추가하거나 제거합니다 (toggle).
+        searchInput.classList.toggle('show');
+
+        // 만약 검색창이 보이는 상태가 되었다면, 바로 입력할 수 있도록 focus를 줍니다.
+        if (searchInput.classList.contains('show')) {
+            searchInput.focus();
+        }
     });
 </script>
 

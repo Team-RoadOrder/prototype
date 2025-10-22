@@ -1,8 +1,7 @@
 @import "index/header.css";
 @import "index/main.css";
-@import "index/map.css";
-@import "index/marker.css";
-
+@import "index/search-form.css";
+@import "index/grid.css";
 @import "common.css";
 
 
@@ -12,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    background-color: rgb(243,243,233);
 }
 
 body > .box {

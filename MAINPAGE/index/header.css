@@ -132,3 +132,53 @@
     transition-delay: 0ms;
     transition-duration: 0.3s;
 }
+
+/* 아이콘 메뉴 아이템들을 정렬하기 위한 스타일 */
+#header .icon-menu .item {
+    display: flex;
+    align-items: center;
+    position: relative;/* 아이콘과 검색창을 세로 중앙 정렬 */
+}
+#header .icon-menu .item form {
+    display: flex;
+    flex-direction: row
+}
+#header .icon-menu .item .glass {
+    background: none; /* 배경 제거 */
+    border: none;     /* 테두리 제거 */
+    padding: 0;       /* 안쪽 여백 제거 */
+    cursor: pointer;
+}
+#header .icon-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 아이콘 사이의 간격을 15px로 설정 */
+}
+/* 검색창 기본 스타일 (숨겨진 상태) */
+#header .search-box {
+    width: 0;
+    opacity: 0;
+    display: none;
+    border: none;
+    outline: none;
+    background: transparent; /* 배경 투명 */
+    border-bottom: 2px solid white; /* 밑줄 스타일 */
+    color: white; /* 입력 텍스트 색상 */
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px; /* 아이콘과의 간격 */
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+}
+
+/* 검색창이 보여질 때의 스타일 (show 클래스가 추가될 때) */
+#header .search-box.show {
+    width: 150px; /* 원하는 너비로 조절 */
+    opacity: 1;
+    display: block;
+}
+
+/* 모든 아이콘 색상을 흰색으로 통일 */
+#header .icon-menu .icon path {
+    fill: white; /* 아이콘 내부 색상 */
+    stroke: white; /* 아이콘 테두리 색상 (필요시) */
+}

@@ -18,7 +18,7 @@
 #shop-header{
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 200px;
     background-color: #ffffff;
     border: 1px solid #ebebeb;
     border-radius: 12px;
@@ -32,6 +32,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    z-index: 999;
 }
 #shop-header::before{
     content: "";

@@ -87,9 +87,180 @@
 <main id="main" >
     <img src="../MY/images/waviness.png" class="image" alt="">
 </main> <!-- 헤더뒤에 배경 -->
+<div id="map-wrapper">
+<ul id="map">
+    <li class="shop-detail">
+        <a href="../SHOP/shop.html">
+            <div class="store-info">
+                <div class="firstLine">
+                    <span class="name">waviness</span>
+                    <span class="km">0.67km</span>
+                </div>
+                <div class="address">Yongsan District, seoul</div>
+                <div class="time">영업중 10:00~22:00</div>
+                <div class="tag-area">
+                    <span class="tag">예약 가능</span>
+                    <span class="tag">픽업 가능</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="shop-detail">
+        <a href="../SHOP/shop.html">
+            <div class="store-info">
+                <div class="firstLine">
+                    <span class="name">waviness</span>
+                    <span class="km">0.67km</span>
+                </div>
+                <div class="address">Yongsan District, seoul</div>
+                <div class="time">영업중 10:00~22:00</div>
+                <div class="tag-area">
+                    <span class="tag">예약 가능</span>
+                    <span class="tag">픽업 가능</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="shop-detail">
+        <a href="../SHOP/shop.html">
+            <div class="store-info">
+                <div class="firstLine">
+                    <span class="name">waviness</span>
+                    <span class="km">0.67km</span>
+                </div>
+                <div class="address">Yongsan District, seoul</div>
+                <div class="time">영업중 10:00~22:00</div>
+                <div class="tag-area">
+                    <span class="tag">예약 가능</span>
+                    <span class="tag">픽업 가능</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="shop-detail">
+        <a href="../SHOP/shop.html">
+            <div class="store-info">
+                <div class="firstLine">
+                    <span class="name">waviness</span>
+                    <span class="km">0.67km</span>
+                </div>
+                <div class="address">Yongsan District, seoul</div>
+                <div class="time">영업중 10:00~22:00</div>
+                <div class="tag-area">
+                    <span class="tag">예약 가능</span>
+                    <span class="tag">픽업 가능</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="shop-detail">
+        <a href="../SHOP/shop.html">
+            <div class="store-info">
+                <div class="firstLine">
+                    <span class="name">waviness</span>
+                    <span class="km">0.67km</span>
+                </div>
+                <div class="address">Yongsan District, seoul</div>
+                <div class="time">영업중 10:00~22:00</div>
+                <div class="tag-area">
+                    <span class="tag">예약 가능</span>
+                    <span class="tag">픽업 가능</span>
+                </div>
+            </div>
+        </a>
+    </li>
 
-<div class="map"> 지도 들어갈곳</div>
-
+</ul>
+</div>
 <button id="shop-header"><a href="../SHOPLIST/shoplist.html">매장 목록 보기</a></button>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dbcb22a9911b142fc070c041189c30b6&libraries=services,clusterer,drawing"></script>
+<script type="text/javascript">
+    window.onload = function() {
+        // 1. 지도를 표시할 div와 지도 옵션 설정
+        var mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng( 37.541814343510836 , 127.00460531687455 ), // 초기 중심 좌표
+                level: 4// 지도의 확대 레벨
+            };
+
+        // 2. 지도 생성
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 3. 여러 마커의 위치와 정보를 담은 배열
+        var positions = [
+            {
+                title: 'waviness',
+                latlng: new kakao.maps.LatLng(37.543643, 127.002840)
+            },
+            {
+                title: 'Shop 2',
+                latlng: new kakao.maps.LatLng(37.544600, 127.005800)
+            },
+            {
+                title: 'Shop 3',
+                latlng: new kakao.maps.LatLng(37.541699, 127.001950)
+            },
+            {
+                title: 'Shop 4',
+                latlng: new kakao.maps.LatLng(37.542888, 127.006999)
+            }
+        ];
+
+        // 4. 반복문을 사용하여 여러 개의 커스텀 오버레이를 생성하고 지도에 표시
+        positions.forEach(function(pos) {
+            // 내부의 .marker-text div를 제거하고 더 간단하게 만듭니다.
+            // .substring()을 제거하여 전체 이름이 표시되도록 합니다.
+            var content = '<div class="custom-marker-style">' + pos.title + '</div>';
+
+            // 커스텀 오버레이를 생성하는 나머지 코드는 동일합니다.
+            var customOverlay = new kakao.maps.CustomOverlay({
+                map: map,
+                position: pos.latlng,
+                content: content,
+                yAnchor: 1
+            });
+        });
+
+        // 지도의 중심을 첫 번째 마커 위치로 부드럽게 이동시킬 수도 있습니다.
+        map.panTo(positions[0].latlng);
+    };
+</script>
+<script>
+    document.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 0) {
+            header.classList.add('scroll-active');
+        } else {
+            header.classList.remove('scroll-active');
+        }
+    });
+    const dots = document.querySelectorAll('.dot');
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', function(e) {
+            // 모든 점의 'checked' 클래스 제거
+            dots.forEach(d => d.classList.remove('checked'));
+
+            // 현재 클릭된 점에 'checked' 클래스 추가
+            this.classList.add('checked');
+        });
+    });
+    // 검색창에 있는 헤더를 위한
+    const searchIcon = document.querySelector('.glass');
+    const searchInput = document.getElementById('searchInput');
+
+    // 돋보기 아이콘에 'click' 이벤트 리스너를 추가합니다.
+    searchIcon.addEventListener('click', (event) => {
+
+
+        // searchInput 요소에 'show' 클래스를 추가하거나 제거합니다 (toggle).
+        searchInput.classList.toggle('show');
+
+        // 만약 검색창이 보이는 상태가 되었다면, 바로 입력할 수 있도록 focus를 줍니다.
+        if (searchInput.classList.contains('show')) {
+            searchInput.focus();
+        }
+    });
+</script>
 </body>
 </html>

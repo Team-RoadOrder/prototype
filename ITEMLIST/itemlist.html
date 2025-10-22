@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <title>SHOP list</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Gowun+Dodum&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script defer src="./scripts/index.js"></script>
+    <title>상품목록</title>
 </head>
 <body>
+<!-- 헤더부분 , 로고와 네비바가 들어감 -->
 <header class="box" id="header">
     <div class="left">
         <a href="../index.html" class="box" id="logo">
@@ -76,7 +80,7 @@
             </a>
         </li>
         <li class="item">
-            <a class="login" href="./LOGIN/Login.html">
+            <a class="login" href="../LOGIN/Login.html">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg"  fill="#000000" version="1.1" id="Capa_1" width="30" height="25" viewBox="0 0 45.916 45.916" xml:space="preserve"><g><g><path d="M30.061,18.237c2.127-1.916,3.476-4.683,3.476-7.772C33.536,4.684,28.85,0,23.07,0C17.29,0,12.604,4.685,12.604,10.465    c0,3.085,1.343,5.85,3.467,7.766c-5.441,0.422-9.74,4.928-9.779,10.477L6.224,40.154c-0.01,1.525,0.59,2.99,1.665,4.072    c1.075,1.08,2.537,1.689,4.062,1.689h10.151h11.794c3.15,0,5.709-2.543,5.729-5.693l0.068-11.361    c0.021-2.826-1.089-5.538-3.083-7.544C34.851,19.543,32.526,18.465,30.061,18.237z"/></g></g></svg>
             </a>
         </li>
@@ -86,38 +90,35 @@
 </header>
 <main id="main" >
     <img src="../MY/images/waviness.png" class="image" alt="메인이미지">
-<!--    <img src="./images/img.png" class="image" alt="메인이미지">-->
+    <!--    <img src="./images/img.png" class="image" alt="메인이미지">-->
 </main> <!-- 헤더뒤에 배경 -->
-<div id="shop">
-    <div class="shop-list">매장 목록</div>
+<div id="item">
+    <div class="item-list">상품 목록</div>
     <ul class="option-list">
-        <li class="item">영업중</li>
-        <li class="item">거리순</li>
         <li class="item">인기순</li>
+        <li class="item">가격순</li>
     </ul>
-    <button id="map"><a href="../NEARBYSHOP/nearbyshop.html">지도보기</a></button>
-    <ul class="store-list">
-        <li class="store" >
+    <ul class="item-container">
+        <li class="list" >
             <a href="../SHOP/shop.html">
-            <img class="image" src="../MY/images/shop/shop3.png" alt="매장이미지">
-            <div class="store-info">
-                <div class="firstLine">
-                    <span class="name">waviness</span>
-                    <span class="km">0.67km</span>
+                <img class="image" src="https://static.upbit.com/logos/BTC.png" alt="상품이미지">
+                <div class="item-info">
+                    <div class="firstLine">
+                        <span class="name">비트코인</span>
+                        <span class="km">Bitcoin</span>
+                    </div>
+                    <div class="address">KRW-BTC</div>
+                    <div class="time">162,939,000</div>
+                    <div class="tag-area">
+                        <span class="tag">2,856,000</span>
+                    </div>
                 </div>
-                <div class="address">Yongsan District, seoul</div>
-                <div class="time">영업중 10:00~22:00</div>
-                <div class="tag-area">
-                    <span class="tag">예약 가능</span>
-                    <span class="tag">픽업 가능</span>
-                </div>
-            </div>
             </a>
         </li>
-        <li class="store">
+        <li class="list">
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop1.webp" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">Fogssy 포그씨</span>
                         <span class="km">0.15km</span>
@@ -131,10 +132,10 @@
                 </div>
             </a>
         </li>
-        <li class="store">
+        <li class="list">
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop2.webp" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">수아레 성수 플래그십 스토어</span>
                         <span class="km">0.67km</span>
@@ -148,10 +149,10 @@
                 </div>
             </a>
         </li>
-        <li class="store">
+        <li class="list">
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop4.webp" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">TonyWack 한남</span>
                         <span class="km">0.67km</span>
@@ -165,10 +166,10 @@
                 </div>
             </a>
         </li>
-        <li class="store" >
+        <li class="list" >
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop3.png" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">waviness</span>
                         <span class="km">0.67km</span>
@@ -182,10 +183,10 @@
                 </div>
             </a>
         </li>
-        <li class="store">
+        <li class="list">
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop1.webp" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">Fogssy 포그씨</span>
                         <span class="km">0.15km</span>
@@ -199,10 +200,10 @@
                 </div>
             </a>
         </li>
-        <li class="store">
+        <li class="list">
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop2.webp" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">수아레 성수 플래그십 스토어</span>
                         <span class="km">0.67km</span>
@@ -216,10 +217,10 @@
                 </div>
             </a>
         </li>
-        <li class="store">
+        <li class="list">
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop4.webp" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">TonyWack 한남</span>
                         <span class="km">0.67km</span>
@@ -233,10 +234,10 @@
                 </div>
             </a>
         </li>
-        <li class="store" >
+        <li class="list" >
             <a href="../SHOP/shop.html">
                 <img class="image" src="../MY/images/shop/shop3.png" alt="매장이미지">
-                <div class="store-info">
+                <div class="item-info">
                     <div class="firstLine">
                         <span class="name">waviness</span>
                         <span class="km">0.67km</span>
@@ -253,8 +254,6 @@
     </ul>
 
 </div>
-
-
 <script>
     document.addEventListener('scroll', function() {
         const header = document.getElementById('header');
@@ -264,7 +263,7 @@
             header.classList.remove('scroll-active');
         }
     });
-
+    
     // 검색창에 있는 헤더를 위한
     const searchIcon = document.querySelector('.glass');
     const searchInput = document.getElementById('searchInput');
@@ -282,6 +281,5 @@
         }
     });
 </script>
-
 </body>
 </html>

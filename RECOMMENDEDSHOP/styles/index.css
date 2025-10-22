@@ -1,10 +1,8 @@
 @import "index/header.css";
-@import "index/main.css";
-@import "index/map.css";
-@import "index/marker.css";
+@import "index/inner.css";
 
 @import "common.css";
-
+@import "object/video.css";
 
 
 body {
@@ -12,9 +10,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
 }
 
 body > .box {
     width: 71.25rem;
+}
+body > #inner {
+    width: 65rem;
+
+
 }

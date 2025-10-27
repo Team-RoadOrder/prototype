@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Gowun+Dodum&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/reservation.js"></script>
+
 </head>
 <body>
 
@@ -106,48 +110,81 @@
         </div>
     </div>
 </div>
-
+<div id="dialog">
+    <div class="modal">
+        <div class="title">제목자리</div>
+        <div class="content">내용자리</div>
+        <div class="button-container">
+            <button class="button">버튼 1</button>
+            <button class="button">버튼 2</button>
+        </div>
+    </div>
+</div>
 <div class="shop"></div>
-
 <div class="box">
 <div id = "item" >
     <h1>상품 선택</h1>
     <div class="container">
         <form id="form">
             <input type="checkbox" id="checkbox1">
-            <label for="checkbox1">
-                <span class="checkmark"></span>
+            <label for="checkbox1" class="label">
+
                 <span class="image-wrapper">
                     <img src="./images/category/one-1.webp" alt="상품이미지" draggable="false">
                 </span>
+                <span class="text-wrapper">
+                    <span class="title">Waviness Tide Layer Wool Crop Jacket Black</span>
+                    <span class="price">41,2000원</span>
+                    <span class="shop">waviness</span>
+                </span>
             </label>
             <input type="checkbox" id="checkbox2">
-            <label for="checkbox2">
-                <span class="checkmark"></span>
+            <label for="checkbox2" class="label">
+
                 <span class="image-wrapper">
                     <img src="./images/category/one-2.webp" alt="상품이미지" draggable="false">
                 </span>
+                <span class="text-wrapper">
+                    <span class="title">Waviness Tide Layer Wool Crop Jacket Black</span>
+                    <span class="price">41,2000원</span>
+                    <span class="shop">waviness</span>
+                </span>
             </label>
             <input type="checkbox" id="checkbox3">
-            <label for="checkbox3">
-                <span class="checkmark"></span>
+            <label for="checkbox3" class="label" >
+
                 <span class="image-wrapper">
                     <img src="./images/category/one-3.webp" alt="상품이미지" draggable="false">
                 </span>
+                <span class="text-wrapper">
+                    <span class="title">Waviness Tide Layer Wool Crop Jacket Black</span>
+                    <span class="price">41,2000원</span>
+                    <span class="shop">waviness</span>
+                </span>
             </label>
             <input type="checkbox" id="checkbox4">
-            <label for="checkbox4">
-                <span class="checkmark"></span>
+            <label for="checkbox4" class="label" >
+
 
                 <span class="image-wrapper">
                     <img src="./images/category/one-4.webp" alt="상품이미지" draggable="false">
                 </span>
+                <span class="text-wrapper">
+                    <span class="title">Waviness Tide Layer Wool Crop Jacket Black</span>
+                    <span class="price">41,2000원</span>
+                    <span class="shop">waviness</span>
+                </span>
             </label>
             <input type="checkbox" id="checkbox5">
-            <label for="checkbox5">
-                <span class="checkmark"></span>
+            <label for="checkbox5" class="label" >
+
                 <span class="image-wrapper">
                     <img src="./images/category/one-5.webp" alt="상품이미지" draggable="false">
+                </span>
+                <span class="text-wrapper">
+                    <span class="title">Waviness Tide Layer Wool Crop Jacket Black</span>
+                    <span class="price">41,2000원</span>
+                    <span class="shop">waviness</span>
                 </span>
             </label>
         </form>
@@ -155,49 +192,16 @@
 </div>
 <div id="reservation">
     <form>
-    <label for="date"> 방문 날짜 선택</label>
-    <input type="datetime-local" id="date">
-    <button id="button"> 예약확정하기 </button>
-    <button id="cart"> 장바구니 </button>
+        <h1>방문 날짜 선택</h1>
+    <label for="date"></label>
+    <input type="text" id="date" placeholder="0000-00-00 00:00:00">
+    <button class="button reservate"> 예약확정하기 </button>
+    <button class="button cart"> 장바구니 </button>
     </form>
 </div>
 </div>
 
-    <script>
-        document.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 0) {
-                header.classList.add('scroll-active');
-            } else {
-                header.classList.remove('scroll-active');
-            }
-        });
-
-        // 검색창에 있는 헤더를 위한
-        const searchIcon = document.querySelector('.glass');
-        const searchInput = document.getElementById('searchInput');
-
-        // 돋보기 아이콘에 'click' 이벤트 리스너를 추가합니다.
-        searchIcon.addEventListener('click', (event) => {
-
-
-            // searchInput 요소에 'show' 클래스를 추가하거나 제거합니다 (toggle).
-            searchInput.classList.toggle('show');
-
-            // 만약 검색창이 보이는 상태가 되었다면, 바로 입력할 수 있도록 focus를 줍니다.
-            if (searchInput.classList.contains('show')) {
-                searchInput.focus();
-            }
-        });
-    const $button = document.getElementById("button");
-    $button.addEventListener("click", (e) => {
-        alert('예약이 확정되었습니다.')
-    })
-    const $cart = document.getElementById("cart");
-    $cart.addEventListener("click", (e) => {
-            alert('장바구니에 담았습니다.')
-        })
-
-</script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
 </body>
 </html>

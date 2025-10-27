@@ -116,7 +116,7 @@ const drawPairs = (args) => {
         // DOMParser를 사용하여 HTML 문자열로부터 <li> 요소를 생성합니다.
         const $li = new DOMParser().parseFromString(`
              <li class="list" data-code="${pair['market']}" data-quote-loader >
-            <a href="../../SHOP/shop.html">
+            <a href="../ITEM/item.html">
                 <img class="image" src="https://static.upbit.com/logos/${symbol}.png" alt="상품이미지">
                 <div class="item-info">
                     <div class="firstLine">

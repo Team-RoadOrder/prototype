@@ -5,6 +5,8 @@
     position: relative;
     height: 748px; /* 추가 */
     width: 100%;
+
+
 }
 
 #splash > #side {
@@ -69,6 +71,8 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+
+
 }
 #splash > .info >.title {
     font-size: 4rem;
@@ -89,6 +93,9 @@
     color: #ffffff;
 
 }
+
+
+
 #splash > .info >.logo {
     margin-top: 2rem;
     background-color: transparent;
@@ -96,10 +103,12 @@
     padding: 1.5rem 3rem;
     font-size: 1.5rem;
     font-weight: 400;
+    backdrop-filter: blur(20px);
+    color: #ffffff;
+
 }
 #splash > .info >.logo:hover {
     background-color: #000000;
-    color: #ffffff;
     transition-delay: 150ms;
     transition-property: color, background-color;
 

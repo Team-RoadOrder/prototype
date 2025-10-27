@@ -1,80 +1,59 @@
-@import "basic.css";
-@import "header.css";
+@import "index/header.css";
+@import "index/main.css";
+@import "index/item.css";
+@import "common.css";
+
 
 
 body {
     align-items: center;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    /*flex-direction: row;*/
+    background-color: #f4f3e8;
+    flex-direction: column;
 
 }
 
-#header > .left > .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 2rem;
-    gap: 2rem;
-    font-size: 1.3rem;
-    font-weight: 500;
-    font-family: "Bitter", serif;
-    box-sizing: border-box;
-    position: relative;
-    top: 0.5rem;
-    left: 1rem;
+
+body > .box {
+    width: 71.25rem;
 }
 
-/*body .background {*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background-color: #EFEFEF;*/
-/*    background-position: center;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    position: absolute;*/
-/*}*/
-
-
-body  .box {
-    padding: 10rem 0.5rem 0 0.5rem;
-}
 body .container {
-    justify-content: center;
+    padding: 2rem;
+    justify-content: space-around;
     align-items: flex-start;
     width: 100%;
+    height: auto;
     overflow-y: hidden;
     display: flex;
     flex-direction: row;
     position: relative;
     overflow-x: hidden;
-    background: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+    background-color: #f4f3e8;
+    /*border-radius: 0.5rem;*/
+    /*box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);*/
 
 }
-
-
 
 
 .splash{
     align-items: stretch;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1.125rem;
     justify-content: flex-start;
-    position: relative;
+    position: sticky;
 }
+
 .image-wrapper {
-    width: 33rem;
+    width: 35rem;
     aspect-ratio: 13/14;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     border-radius: 0.25rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
     position: relative;
@@ -83,14 +62,14 @@ body .container {
 }
 
 .dot-container {
-    right: 16.5rem;
-    bottom: 1rem;
+    right: 18rem;
+    bottom: 2.5rem;
     align-items: center;
     display: flex;
     flex-direction: row;
     gap: 0.375rem;
     justify-content: center;
-    position: absolute;
+    position: relative;
     transform: translateX(50%);
 }
 .dot-container .dot {
@@ -104,7 +83,7 @@ body .container {
     background-color: #ffffff60;
 }
 
-.image-wrapper> .image {
+.image-wrapper > .image {
     width: 100%;
     height: 100%;
     border-radius: 0.25rem;
@@ -113,26 +92,44 @@ body .container {
     object-fit: cover;
     object-position: center;
     scroll-snap-align: start;
+    display: block;
+}
+
+.subImage {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px; /* 큰 이미지와의 간격 */
+    flex-direction: row;
+}
+
+.subImage .sub img {
+    width: 60px; /* 썸네일 크기 */
+    height: 60px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative;
 }
 
 /*
 ------------------------------------------------------------------------------------------------------------------*/
 
 #login-wrapper{
+    width: 40%;
     align-items: stretch;
     display: flex;
     flex-direction: column;
     gap: 1.125rem;
     justify-content: flex-start;
     position: relative;
-    background-color: white;
-    border: #f4f4f4 solid 1px;
+    background-color: #f4f3e8;
     border-radius: 0.5rem;
     margin-left: 1.25rem;
 }
 
 .buyText{
-    font-size: 14px;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .buyNumber{
@@ -165,6 +162,7 @@ body .container {
     display: flex;
     margin: 10px 0;
     padding: 11px 8px 11px 10px;
+    box-shadow: black 0 0 0.0625rem;
 }
 
 .selectOption{
@@ -179,11 +177,25 @@ body .container {
     justify-content: center;
     font-size: 18px;
     font-weight: 700;
-    height: 60px;
+    height: 40px;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
-    margin: 10px 0;
+
+    padding: 11px 8px 11px 10px;
+}
+
+.reservation{
+    background-color: rgb(65, 185, 121);
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
     padding: 11px 8px 11px 10px;
 }
 
@@ -198,7 +210,7 @@ body .container {
     font-weight: 400;
     display: flex;
     justify-content: center;
-    /*padding: 11px 8px 11px 10px;*/
+    box-shadow: black 0 0 0.0625rem;
 }
 
 
@@ -263,6 +275,10 @@ body .container {
 .deliveryText2, .deliveryText3{
     font-size: 12px;
     color: rgba(34, 34, 34, .5);
+}
+
+.ad {
+    width: 100%;
 }
 
 .shopName{
@@ -341,6 +357,148 @@ body .container {
     opacity: 1;
 }
 
+.review {
+    margin-top: 30px;
+    text-decoration-line: none;
+}
 
+.review h3 {
+    font-size: 18px;
+}
 
+.review-bar {
+    margin: 10px 0;
+}
+
+.bar {
+    background: #eee;
+    height: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: black;
+}
+
+.review ul {
+    /*list-style: none;*/
+    padding: 0;
+    margin: 0;
+}
+
+.review li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.moreReview{
+    align-items: center;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    height: 60px;
+    cursor: pointer;
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    box-shadow: black 0 0 0.0625rem;
+    margin-bottom: 1rem;
+}
+
+.productContainer{
+    width: 100%;
+    height: 100%;
+    top: 50rem;
+    flex-direction: column;
+    display: flex;
+
+}
+
+/*------------------------------------------------------------------------------------*/
+
+.productHead{
+    color: rgba(34, 34, 34, .5);
+    margin: 1rem;
+    padding: 1rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 모달 배경 */
+.modal {
+    display: none; /* 기본은 숨김 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모달 내용 */
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+/* 닫기 버튼 (X) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.close:hover {
+    color: #000;
+}
+
+/* 사이즈 버튼 */
+.size-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.size {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.size:hover {
+    background: #f4f3e8;
+    border-color: #000;
+}
+
+/* 모달 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
 

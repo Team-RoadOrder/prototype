@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
+    z-index: 999; /* 다른 요소 위에 표시되도록 설정 */
 }
 
 #header .nav a {

@@ -114,6 +114,9 @@
 
 </div>
 
+<!-- 버튼 뒤에 글래스 모피즘 -->
+
+
 <ul class="box" id="quick">
         <li class="item">
             <a class="link" href="./SHOPLIST/shoplist.html">
@@ -305,17 +308,6 @@
         } else {
             header.classList.remove('scroll-active');
         }
-    });
-    const dots = document.querySelectorAll('.dot');
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', function(e) {
-            // 모든 점의 'checked' 클래스 제거
-            dots.forEach(d => d.classList.remove('checked'));
-
-            // 현재 클릭된 점에 'checked' 클래스 추가
-            this.classList.add('checked');
-        });
     });
     // 검색창에 있는 헤더를 위한
     const searchIcon = document.querySelector('.glass');

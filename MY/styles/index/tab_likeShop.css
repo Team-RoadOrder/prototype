@@ -32,7 +32,8 @@
     width: 100%;
     aspect-ratio: 1/1;
     background-position: center;
-    background-size: contain;
+    background-size: 300%;  /*이미지 너무 작은것도 많아서 이상해보여서 3배 확대함 */
+    background-repeat: no-repeat;
     flex-shrink: 0;
 }
 #content-tab-3 .grid > .box .text-container {

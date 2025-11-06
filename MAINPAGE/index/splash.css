@@ -95,21 +95,25 @@
 }
 
 
-
 #splash > .info >.logo {
-    margin-top: 2rem;
-    background-color: transparent;
-    border-radius: 999rem;
-    padding: 1.5rem 3rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    backdrop-filter: blur(20px);
-    color: #ffffff;
-
+    padding: 1.4rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    box-shadow: 0 4px 20px rgba(62, 39, 35, 0.15);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transform: translate(0, 100%);
 }
 #splash > .info >.logo:hover {
-    background-color: #000000;
-    transition-delay: 150ms;
-    transition-property: color, background-color;
-
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 25px #a9a9a9;
+    transform: translate(0, calc(100% - 5px));
+    border-color: rgba(255, 255, 255, 0.5);
 }

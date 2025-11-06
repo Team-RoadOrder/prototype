@@ -8,7 +8,14 @@
     width: 100%;
     z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
 }
-
+#header .logo {
+    width: 11rem;
+    top: -1.2rem;
+    left: -1rem;
+    aspect-ratio: 1/1;
+    position: absolute;
+    filter: invert(100%) brightness(200%);
+}
 #header .nav a {
     color: #fff; /* 네비게이션 텍스트를 흰색으로 설정 */
     transition: color 0.3s ease;
@@ -32,24 +39,29 @@
 #header.scroll-active .nav a {
     color: #000; /* 스크롤 시 텍스트 색상을 검정으로 변경 */
 }
+#header.scroll-active #logo {
+    filter: invert(0%) brightness(0%);
+}
 #header.scroll-active .nav .selected a {
     color: rgb(82,141,216);
 }
 #header.scroll-active .nav a:hover {
     color: rgb(101, 101, 101); /* 호버 색상 유지 */
 }
-
-#header.scroll-active .icon-menu .icon {
-    fill: #000; /* 스크롤 시 아이콘 색상을 검정으로 변경 */
+#header.scroll-active .icon-menu .icon path{
+    filter: invert(0%) brightness(0%);
 }
-
+#header.scroll-active #searchInput {
+    filter: invert(0%) brightness(0%);
+}
 /* 원래 제공된 CSS 스타일을 유지하면서 스크롤 시에도 작동하도록 재조정 */
-.site-logo {
+/*.site-logo {
     width: 150px;
     height: 29.45px;
-}
+}*/
 
 #header > .left > .nav {
+    margin-left: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -61,8 +73,8 @@
     font-family: "Bitter", serif;
     box-sizing: border-box;
     position: relative;
-    top: 0.5rem;
-    left: 1rem;
+    top: -0.5rem;
+    left: 3rem;
 }
 
 #header > .left > #logo {
@@ -83,7 +95,7 @@
     justify-content: flex-end;
     position: absolute;
     right: 10%;
-    top: 30%;
+    top: 35%;
 }
 /* 서브메뉴 기본 스타일: display 대신 opacity와 visibility 사용 */
 #header > .left >.nav >.item >.sub-menu {

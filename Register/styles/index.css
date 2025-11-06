@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import "dialog.css";
 
 :root {
     /* 로그인 페이지와 동일한 색상 변수 */
@@ -52,7 +53,22 @@ body {
     width: 100%;
     margin-top: 20px; /* 필드 간 간격 */
 }
+.int-area button {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 20%;
+    height: 2rem;
+    background-color: var(--basis-font-color);
+    border: none;
+    color: #312f2f;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Gowun Dodum", sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
 
+}
 .int-area input {
     width: 100%;
     padding: 20px 10px 10px;

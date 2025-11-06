@@ -1,0 +1,9 @@
+#shop-info {
+    display: flex;
+    flex-direction: column;
+    width: 75rem;
+    height: 20rem;
+    background: #FFFFFF;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}

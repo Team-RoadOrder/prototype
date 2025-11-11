@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Black+Han+Sans&family=Gowun+Dodum&family=Lavishly+Yours&family=Nanum+Brush+Script&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Black+Han+Sans&family=Gowun+Dodum&family=Lavishly+Yours&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Yellowtail&display=swap');
 #main {
     margin-top: 4rem;
     display: grid;
@@ -12,15 +14,61 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
-#items {
+.sections >.header {
+    display: flex;
+    flex-direction: row;
+
+}
+.sections >.header >.title {
+    padding-top: 5rem;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    transform: translateX(-30%);
+}
+.sections >.header >.description {
+    padding-top: 6rem;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #737373;
+    font-weight: 300;
+    transform: translateX(-5%);
+}
+
+#item-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-grow: 1;
-    width: 65rem;
-    height: 40rem;
+    width: 75rem;
+    height: 30rem;
     gap: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+.sections .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-end;
+    transform: translateX(90%);
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    font-weight: 300;
 
+}
+.sections .buttons > .okay {
+    color: #f0f0f0;
+    background-color: #3AABB7;
+    padding: 1.5rem 3rem;
+    border-radius: 1rem;
+}
+.sections .buttons > .cancel {
+    color: #f0f0f0;
+    background-color: #E3372B;
+    padding: 1.5rem 3rem;
+    border-radius: 1rem;
 }

@@ -17,6 +17,7 @@ body{
 
 .login-form{
     position: relative;
+    /*bottom: 4rem;*/
 }
 
 .login-form h1 {

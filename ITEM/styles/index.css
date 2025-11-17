@@ -2,6 +2,7 @@
 @import "index/main.css";
 @import "index/item.css";
 @import "common.css";
+@import "../../MAINPAGE/index/header.css";
 
 
 
@@ -16,7 +17,7 @@ body {
 }
 
 
-body > .box {
+body > .container {
     width: 71.25rem;
 }
 

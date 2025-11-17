@@ -12,12 +12,12 @@ body{
     height: 100vh;
     background: url("../img/road.jpg");
     background-size: cover;
-
+    position: relative;
 }
 
 .login-form{
-    position: relative;
-    /*bottom: 4rem;*/
+    position: absolute;
+    top: 18rem;
 }
 
 .login-form h1 {

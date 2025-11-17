@@ -57,18 +57,30 @@
     transform: translateX(90%);
     font-size: 1.6rem;
     margin-bottom: 5rem;
+    margin-top: 5rem;
     font-weight: 300;
 
 }
 .sections .buttons > .okay {
     color: #f0f0f0;
-    background-color: #3AABB7;
+    background: linear-gradient(to right, #010852, #125454);
+    box-shadow: 0 4px 20px rgba(62, 39, 35, 0.15);
     padding: 1.5rem 3rem;
     border-radius: 1rem;
+
+}
+.sections .buttons > .okay:hover {
+    transform: scale(1.01);
+    color: #a9a9a9;
 }
 .sections .buttons > .cancel {
     color: #f0f0f0;
-    background-color: #E3372B;
+    background: linear-gradient(to right, #E3372B, #E02B3A);
+    box-shadow: 0 4px 20px rgba(62, 39, 35, 0.15);
     padding: 1.5rem 3rem;
     border-radius: 1rem;
+}
+.sections .buttons > .cancel:hover {
+    transform: scale(1.01);
+    color: #a0a0a0;
 }
